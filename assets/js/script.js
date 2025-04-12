@@ -1283,3 +1283,308 @@ document.getElementById('themeToggle')?.addEventListener('click', function() {
         });
     }, 300);
 });
+
+// Initialize Data Insights Workflow Charts
+document.addEventListener('DOMContentLoaded', function() {
+    initDataInsightsWorkflowCharts();
+});
+
+function initDataInsightsWorkflowCharts() {
+    // Initialize Data Sources Chart (Doughnut)
+    initDataSourcesChart();
+    
+    // Initialize Data Quality Chart (Bar)
+    initDataQualityChart();
+    
+    // Initialize Analytics Methods Chart (Pie)
+    initAnalyticsMethodsChart();
+    
+    // Initialize Insight Delivery Chart (Horizontal Bar)
+    initInsightDeliveryChart();
+    
+    // Make charts responsive on window resize
+    window.addEventListener('resize', function() {
+        // Trigger chart resize
+        Object.values(Chart.instances).forEach(chart => {
+            chart.resize();
+        });
+    });
+}
+
+// Data Sources Chart - Doughnut
+function initDataSourcesChart() {
+    const ctx = document.getElementById('dataSourcesChart');
+    if (!ctx) return;
+    
+    const isDark = document.documentElement.classList.contains('dark');
+    
+    const data = {
+        labels: ['CRM Systems', 'ERP Data', 'Web Analytics', 'Social Media', 'IoT Devices'],
+        datasets: [{
+            data: [35, 25, 20, 15, 5],
+            backgroundColor: [
+                '#7c3aed', // Purple
+                '#3b82f6', // Blue
+                '#10b981', // Green
+                '#f59e0b', // Amber
+                '#ec4899'  // Pink
+            ],
+            borderColor: isDark ? '#1f2937' : '#ffffff',
+            borderWidth: 2,
+            hoverOffset: 15,
+            cutout: '50%'
+        }]
+    };
+    
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: isDark ? '#e5e7eb' : '#333',
+                        font: {
+                            size: 12
+                        },
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    backgroundColor: isDark ? 'rgba(31, 41, 55, 0.9)' : 'rgba(255, 255, 255, 0.9)',
+                    titleColor: isDark ? '#e5e7eb' : '#333',
+                    bodyColor: isDark ? '#e5e7eb' : '#333',
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw}%`;
+                        }
+                    }
+                }
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+    
+    return new Chart(ctx, config);
+}
+
+// Data Quality Chart - Bar with Before/After Comparison
+function initDataQualityChart() {
+    const ctx = document.getElementById('dataQualityChart');
+    if (!ctx) return;
+    
+    const isDark = document.documentElement.classList.contains('dark');
+    
+    const data = {
+        labels: ['Completeness', 'Accuracy', 'Consistency', 'Timeliness'],
+        datasets: [
+            {
+                label: 'Before Cleaning',
+                data: [45, 60, 35, 55],
+                backgroundColor: '#f87171', // Red
+                borderRadius: 5
+            },
+            {
+                label: 'After Cleaning',
+                data: [98, 95, 97, 96],
+                backgroundColor: '#10b981', // Green
+                borderRadius: 5
+            }
+        ]
+    };
+    
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: {
+                        color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%';
+                        },
+                        color: isDark ? '#e5e7eb' : '#333'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        color: isDark ? '#e5e7eb' : '#333'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: isDark ? '#e5e7eb' : '#333',
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    backgroundColor: isDark ? 'rgba(31, 41, 55, 0.9)' : 'rgba(255, 255, 255, 0.9)',
+                    titleColor: isDark ? '#e5e7eb' : '#333',
+                    bodyColor: isDark ? '#e5e7eb' : '#333',
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.dataset.label}: ${context.raw}%`;
+                        }
+                    }
+                }
+            }
+        }
+    };
+    
+    return new Chart(ctx, config);
+}
+
+// Analytics Methods Chart - Pie
+function initAnalyticsMethodsChart() {
+    const ctx = document.getElementById('analyticsMethodsChart');
+    if (!ctx) return;
+    
+    const isDark = document.documentElement.classList.contains('dark');
+    
+    const data = {
+        labels: ['Predictive Modeling', 'Classification', 'Clustering', 'Regression', 'Time Series'],
+        datasets: [{
+            data: [30, 25, 20, 15, 10],
+            backgroundColor: [
+                '#7c3aed', // Purple
+                '#3b82f6', // Blue
+                '#10b981', // Green
+                '#f59e0b', // Amber
+                '#ec4899'  // Pink
+            ],
+            borderColor: isDark ? '#1f2937' : '#ffffff',
+            borderWidth: 2,
+            hoverOffset: 15
+        }]
+    };
+    
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: isDark ? '#e5e7eb' : '#333',
+                        font: {
+                            size: 12
+                        },
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    backgroundColor: isDark ? 'rgba(31, 41, 55, 0.9)' : 'rgba(255, 255, 255, 0.9)',
+                    titleColor: isDark ? '#e5e7eb' : '#333',
+                    bodyColor: isDark ? '#e5e7eb' : '#333',
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw}%`;
+                        }
+                    }
+                }
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+    
+    return new Chart(ctx, config);
+}
+
+// Insight Delivery Chart - Horizontal Bar
+function initInsightDeliveryChart() {
+    const ctx = document.getElementById('insightDeliveryChart');
+    if (!ctx) return;
+    
+    const isDark = document.documentElement.classList.contains('dark');
+    
+    const data = {
+        labels: ['Executive Dashboards', 'Operational Reports', 'Predictive Alerts', 'Data Storytelling', 'API Integration'],
+        datasets: [{
+            label: 'Usage Frequency',
+            data: [85, 70, 65, 50, 40],
+            backgroundColor: [
+                '#7c3aed', // Purple
+                '#3b82f6', // Blue
+                '#10b981', // Green
+                '#f59e0b', // Amber
+                '#ec4899'  // Pink
+            ],
+            borderRadius: 5
+        }]
+    };
+    
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: {
+                        color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%';
+                        },
+                        color: isDark ? '#e5e7eb' : '#333'
+                    }
+                },
+                y: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        color: isDark ? '#e5e7eb' : '#333'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    backgroundColor: isDark ? 'rgba(31, 41, 55, 0.9)' : 'rgba(255, 255, 255, 0.9)',
+                    titleColor: isDark ? '#e5e7eb' : '#333',
+                    bodyColor: isDark ? '#e5e7eb' : '#333',
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.raw}% of clients`;
+                        }
+                    }
+                }
+            }
+        }
+    };
+    
+    return new Chart(ctx, config);
+}
