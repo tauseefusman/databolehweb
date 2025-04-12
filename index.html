@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data boleh</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- reCAPTCHA API has been removed -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <div class="logo-container">
+                        <div class="logo-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h1>data boleh</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav-about">About</a></li>
+                        <li><a href="#services" data-i18n="nav-services">Services</a></li>
+                        <li><a href="#how-it-works" data-i18n="nav-how-it-works">How It Works</a></li>
+                        <li><a href="#data-insights" data-i18n="nav-data-insights">Data Insights</a></li>
+                        <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="hero-title">Transform Your Business with Advanced Data Solutions</h1>
+                <h2 data-i18n="hero-subtitle">Data Engineering | Data Science | AI Agents | Cloud Services | Business Intelligence</h2>
+                <p data-i18n="hero-description">We turn complex data into actionable insights using AWS, Azure, Snowflake, Databricks, Power BI, Tableau and ThoughtSpot.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary-btn" data-i18n="hero-cta-poc">Request Free POC</a>
+                    <a href="#how-it-works" class="btn secondary-btn" data-i18n="hero-cta-how">How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Redesigned -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about-title">About Us</h2>
+                <div class="divider"></div>
+                <p data-i18n="about-subtitle">Turning Data Into Success Stories Since 2017</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-i18n="about-heading1">Your Data Journey Partner</h3>
+                    <p data-i18n="about-text1">We believe that every piece of data tells a story. Our mission is to help businesses like yours uncover these stories and transform them into strategic advantages that drive growth, innovation, and success.</p>
+                    
+                    <h3 data-i18n="about-heading2">Expert Team, Proven Results</h3>
+                    <p data-i18n="about-text2">Our diverse team of data scientists, engineers, analysts, and consultants brings together decades of combined experience across industries. We don't just implement technical solutions—we deliver business outcomes that make a measurable difference to your bottom line.</p>
+                    
+                    <h3 data-i18n="about-heading3">Tailored Solutions, Not Templates</h3>
+                    <p data-i18n="about-text3">Every business faces unique challenges and opportunities. We take the time to deeply understand your specific goals and data landscape before crafting custom strategies that align perfectly with your vision. Our collaborative approach ensures you get solutions that grow with your business.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number counter">8+</div>
+                        <div class="stat-text" data-i18n="about-stat1">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number counter">30+</div>
+                        <div class="stat-text" data-i18n="about-stat2">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number counter">110+</div>
+                        <div class="stat-text" data-i18n="about-stat3">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number counter">20+</div>
+                        <div class="stat-text" data-i18n="about-stat4">Team Members</div>
+                    </div>
+                </div>
+                <!-- About CTA section has been removed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Redesigned -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="services-title">Our Services</h2>
+                <div class="divider"></div>
+                <p data-i18n="services-subtitle">Comprehensive Data Solutions for Your Business</p>
+            </div>
+            
+            <div class="services-tabs">
+                <div class="tabs-navigation">
+                    <button class="tab-btn active" data-tab="analytics" data-i18n="services-tab1">Data Analytics</button>
+                    <button class="tab-btn" data-tab="engineering" data-i18n="services-tab2">Data Engineering</button>
+                    <button class="tab-btn" data-tab="science" data-i18n="services-tab3">Data Science</button>
+                    <button class="tab-btn" data-tab="ai" data-i18n="services-tab4">AI & ML</button>
+                    <button class="tab-btn" data-tab="cloud" data-i18n="services-tab5">Cloud Services</button>
+                    <button class="tab-btn" data-tab="bi" data-i18n="services-tab6">BI Tools</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="analytics">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="tab-details">
+                                <h3>Data Analytics</h3>
+                                <p>Transform your raw data into actionable business intelligence with our comprehensive data analytics services.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Descriptive Analytics: Understand what happened</li>
+                                    <li><i class="fas fa-check-circle"></i> Diagnostic Analytics: Discover why it happened</li>
+                                    <li><i class="fas fa-check-circle"></i> Predictive Analytics: Forecast what might happen</li>
+                                    <li><i class="fas fa-check-circle"></i> Prescriptive Analytics: Determine what should be done</li>
+                                </ul>
+                                <a href="#contact" class="btn primary-btn" data-i18n="services-cta">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="engineering">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="tab-details">
+                                <h3>Data Engineering</h3>
+                                <p>Build robust data pipelines and infrastructure to collect, store, and process your business data efficiently.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> ETL/ELT Pipeline Development with modern tools</li>
+                                    <li><i class="fas fa-check-circle"></i> Data Warehouse & Data Lake Architecture</li>
+                                    <li><i class="fas fa-check-circle"></i> Real-Time Data Processing & Stream Analytics</li>
+                                    <li><i class="fas fa-check-circle"></i> Data Quality Management & Governance</li>
+                                </ul>
+                                <a href="#contact" class="btn primary-btn" data-i18n="services-cta">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="science">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="tab-details">
+                                <h3>Data Science</h3>
+                                <p>Leverage advanced statistical analysis and machine learning to extract deeper insights and predictive models from your data.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Predictive Modeling & Forecasting</li>
+                                    <li><i class="fas fa-check-circle"></i> Customer Segmentation & Behavior Analysis</li>
+                                    <li><i class="fas fa-check-circle"></i> Risk Assessment & Fraud Detection</li>
+                                    <li><i class="fas fa-check-circle"></i> Optimization Algorithms for Business Processes</li>
+                                </ul>
+                                <a href="#contact" class="btn primary-btn" data-i18n="services-cta">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="ai">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="tab-details">
+                                <h3>AI & Machine Learning</h3>
+                                <p>Implement cutting-edge AI solutions to automate processes, gain deeper insights, and create intelligent systems.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Custom AI Agent Development & Implementation</li>
+                                    <li><i class="fas fa-check-circle"></i> Natural Language Processing (NLP) Solutions</li>
+                                    <li><i class="fas fa-check-circle"></i> Computer Vision & Image Recognition</li>
+                                    <li><i class="fas fa-check-circle"></i> Recommendation Engines & Personalization</li>
+                                </ul>
+                                <a href="#contact" class="btn primary-btn" data-i18n="services-cta">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="cloud">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="tab-details">
+                                <h3>Cloud Services</h3>
+                                <p>Utilize the power of leading cloud platforms to scale your data operations efficiently and securely.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> AWS: Complete data ecosystem implementation</li>
+                                    <li><i class="fas fa-check-circle"></i> Azure: Data factory, Synapse Analytics & more</li>
+                                    <li><i class="fas fa-check-circle"></i> Snowflake: Data warehouse implementation & optimization</li>
+                                    <li><i class="fas fa-check-circle"></i> Databricks: Unified analytics & ML platform setup</li>
+                                </ul>
+                                <a href="#contact" class="btn primary-btn" data-i18n="services-cta">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="bi">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="tab-details">
+                                <h3>Business Intelligence Tools</h3>
+                                <p>Create powerful visualizations and dashboards to make your data accessible and actionable for decision-makers.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Power BI: Interactive dashboards & reports</li>
+                                    <li><i class="fas fa-check-circle"></i> Tableau: Advanced visualizations & analytics</li>
+                                    <li><i class="fas fa-check-circle"></i> ThoughtSpot: AI-powered analytics platform</li>
+                                    <li><i class="fas fa-check-circle"></i> Custom KPIs tailored to your business needs</li>
+                                </ul>
+                                <a href="#contact" class="btn primary-btn" data-i18n="services-cta">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="hiw-title">How It Works</h2>
+                <div class="divider"></div>
+                <p data-i18n="hiw-subtitle">Our Approach to Turning Your Data into Insights</p>
+            </div>
+            
+            <div class="workflow-container">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="hiw-step1-title">Understand Your Business</h3>
+                        <p>We go through discovery meetings with you to understand your business goals and obstacles. You may have asked questions like:</p>
+                        <ul class="step-list">
+                            <li>Are there days in the week where my business is slower?</li>
+                            <li>Which products sales are dropping?</li>
+                            <li>Should I run promotions on these products?</li>
+                            <li>What will my margins be if I offer promotions?</li>
+                            <li>Are there seasons where some items sell out fast and I should stock up for?</li>
+                        </ul>
+                        <p>We gather all these questions during the discovery meetings.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="hiw-step2-title">Gather and Engineer Your Data</h3>
+                        <p>Your business generates data in many ways:</p>
+                        <ul class="step-list">
+                            <li>Transactional systems (cash registers, e-commerce, CRM)</li>
+                            <li>Customer in-app/online interactions</li>
+                            <li>Business supplies and inventory systems</li>
+                            <li>Marketing and social media platforms</li>
+                        </ul>
+                        <p>Our data engineering team designs the right infrastructure using:</p>
+                        <ul class="step-list">
+                            <li>AWS cloud services (S3, Redshift, Glue, Lambda)</li>
+                            <li>Azure solutions (Data Factory, Synapse Analytics)</li>
+                            <li>Snowflake data warehousing for seamless scaling</li>
+                            <li>Databricks for unified data processing</li>
+                        </ul>
+                        <p>Once we assess your data landscape, we build scalable pipelines that process your data reliably and efficiently.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="hiw-step3-title">Apply Data Science & AI</h3>
+                        <p>Our data scientists apply advanced analytics to discover patterns in your data:</p>
+                        <ul class="step-list">
+                            <li>Statistical analysis to identify trends and correlations</li>
+                            <li>Machine learning models for predictive insights</li>
+                            <li>AI agents to automate decision processes</li>
+                            <li>NLP to extract insights from text data</li>
+                        </ul>
+                        <p>We focus on creating actionable models that directly address your business questions and provide clear recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="hiw-step4-title">Visualize with BI Tools</h3>
+                        <p>We deliver insights through interactive dashboards using leading BI platforms:</p>
+                        <ul class="step-list">
+                            <li>Power BI for comprehensive dashboards with drill-down capabilities</li>
+                            <li>Tableau for advanced visualizations and storytelling</li>
+                            <li>ThoughtSpot for AI-powered analytics and natural language queries</li>
+                            <li>Custom solutions for specialized needs</li>
+                        </ul>
+                        <p>Your dashboards are designed to be intuitive, accessible on any device, and provide clear answers to your business questions in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Insights Section -->
+    <section id="data-insights" class="data-insights">
+    <div class="container">
+        <div class="section-header">
+            <h2 data-i18n="insights-title">Data Insights</h2>
+            <div class="divider"></div>
+            <p data-i18n="insights-subtitle">Unlocking Value from Your Business Data</p>
+        </div>
+        
+        <div class="insights-content">
+            <p class="insights-message">This section has been temporarily removed while we update our data visualization components.</p>
+            <div class="coming-soon">
+                <i class="fas fa-chart-line"></i>
+                <h3>Enhanced Data Insights Coming Soon</h3>
+                <p>We're working on a comprehensive update to our data analytics dashboards.</p>
+                <a href="#contact" class="btn primary-btn">Contact Us for Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section with CAPTCHA -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contact-title">Contact Us</h2>
+                <div class="divider"></div>
+                <p data-i18n="contact-subtitle">Have some sample data? Contact us for a Proof of Concept and get it within a week.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Name" data-i18n="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" data-i18n="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" data-i18n="contact-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Type your message here..." data-i18n="contact-message" required></textarea>
+                        </div>
+                        <!-- reCAPTCHA container has been removed -->
+                        <button type="submit" class="btn primary-btn" data-i18n="contact-submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="contact-email-label">Email</h3>
+                            <p>support@databoleh.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="contact-phone-label">Phone</h3>
+                            <p>+6017-2680344</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="contact-whatsapp-label">WhatsApp</h3>
+                            <p><a href="https://wa.me/60172680344" target="_blank" data-i18n="contact-whatsapp-text">Chat with us on WhatsApp</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="contact-linkedin-label">LinkedIn</h3>
+                            <p><a href="#" target="_blank" data-i18n="contact-linkedin-text">Follow us on LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Chat Button -->
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/60172680344" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer Section - Redesigned -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo-container">
+                            <div class="logo-icon"><i class="fas fa-chart-pie"></i></div>
+                            <h2>data boleh</h2>
+                        </div>
+                        <p data-i18n="footer-tagline">Discover hidden clues to grow your business through its data</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <h3 data-i18n="footer-nav-title">Navigation</h3>
+                        <div class="footer-nav-links">
+                            <a href="#home" data-i18n="nav-home">Home</a>
+                            <a href="#about" data-i18n="nav-about">About</a>
+                            <a href="#services" data-i18n="nav-services">Services</a>
+                            <a href="#how-it-works" data-i18n="nav-how-it-works">How It Works</a>
+                            <a href="#data-insights" data-i18n="nav-data-insights">Data Insights</a>
+                            <a href="#contact" data-i18n="nav-contact">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-services">
+                        <h3 data-i18n="footer-services-title">Services</h3>
+                        <div class="footer-nav-links">
+                            <a href="#services" data-i18n="services-tab1">Data Analytics</a>
+                            <a href="#services" data-i18n="services-tab2">Data Engineering</a>
+                            <a href="#services" data-i18n="services-tab3">Data Science</a>
+                            <a href="#services" data-i18n="services-tab4">AI & Machine Learning</a>
+                            <a href="#services" data-i18n="services-tab5">Cloud Services</a>
+                            <a href="#services" data-i18n="services-tab6">BI Solutions</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3 data-i18n="footer-contact-title">Contact</h3>
+                        <ul class="footer-contact-list">
+                            <li><i class="fas fa-envelope"></i> support@databoleh.com</li>
+                            <li><i class="fas fa-phone"></i> +6017-2680344</li>
+                            <li><i class="fab fa-whatsapp"></i> Chat on WhatsApp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-container">
+                    <div class="copyright-info">
+                        <span class="copyright-year">© 2022-<script>document.write(new Date().getFullYear())</script></span>
+                        <span class="copyright-brand">data boleh</span>
+                        <span class="copyright-divider">|</span>
+                        <span class="copyright-rights" data-i18n="footer-rights">All Rights Reserved</span>
+                    </div>
+                    <div class="company-info">
+                        <span class="company-reg">Registration No: 202101032052 (1432352-D)</span>
+                        <span class="copyright-divider">|</span>
+                    </div>
+                    <div class="terms-links">
+                        <a href="#" data-i18n="footer-terms">Terms of Service</a>
+                        <span class="copyright-divider">|</span>
+                        <a href="#" data-i18n="footer-privacy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
