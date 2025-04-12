@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>data boleh</title>
+    <title>Data Boleh | Data Analytics & Business Intelligence Solutions in Malaysia</title>
+    <meta name="description" content="Transform your business with advanced data solutions including data engineering, data science, AI agents, cloud services, and business intelligence in Malaysia.">
+    <meta name="keywords" content="data analytics, business intelligence, data engineering, data science, AI agents, cloud services, AWS, Azure, Snowflake, Databricks, Power BI, Tableau, ThoughtSpot, Malaysia">
+    <meta name="author" content="Data Boleh">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.databoleh.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.databoleh.com/">
+    <meta property="og:title" content="Data Boleh | Data Analytics & Business Intelligence Solutions">
+    <meta property="og:description" content="Transform your business with advanced data solutions including data engineering, data science, AI agents, cloud services, and business intelligence.">
+    <meta property="og:image" content="https://www.databoleh.com/assets/images/data-boleh-og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.databoleh.com/">
+    <meta property="twitter:title" content="Data Boleh | Data Analytics & Business Intelligence Solutions">
+    <meta property="twitter:description" content="Transform your business with advanced data solutions including data engineering, data science, AI agents, cloud services, and business intelligence.">
+    <meta property="twitter:image" content="https://www.databoleh.com/assets/images/data-boleh-og-image.jpg">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -17,23 +34,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- reCAPTCHA API has been removed -->
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Data Boleh",
+        "url": "https://www.databoleh.com",
+        "logo": "https://www.databoleh.com/assets/images/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+60172680344",
+            "contactType": "customer service",
+            "email": "support@databoleh.com"
+        },
+        "sameAs": [
+            "https://www.facebook.com/databoleh",
+            "https://www.twitter.com/databoleh",
+            "https://www.linkedin.com/company/databoleh",
+            "https://www.instagram.com/databoleh"
+        ],
+        "description": "Data Boleh provides advanced data solutions including data engineering, data science, AI agents, cloud services, and business intelligence to help businesses transform their data into actionable insights."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.databoleh.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.databoleh.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Header Section -->
-    <header id="header">
+    <header id="header" role="banner">
         <div class="container">
             <div class="logo">
-                <a href="#home">
+                <a href="#home" aria-label="Data Boleh Home">
                     <div class="logo-container">
-                        <div class="logo-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="logo-icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
                         <h1>data boleh</h1>
                     </div>
                 </a>
             </div>
             <div class="header-right">
-                <nav>
-                    <div class="hamburger">
+                <nav aria-label="Main Navigation">
+                    <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
@@ -49,8 +100,8 @@
                 </nav>
                 <div class="theme-toggle">
                     <button id="themeToggle" aria-label="Toggle dark/light mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun" style="display: none;"></i>
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                        <i class="fas fa-sun" style="display: none;" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -61,7 +112,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 data-i18n="hero-title">Transform Your Business with Advanced Data Solutions</h1>
+                <h1 data-i18n="hero-title">Transform Your Business with Advanced Data Solutions in Malaysia</h1>
                 <h2 data-i18n="hero-subtitle">Data Engineering | Data Science | AI Agents | Cloud Services | Business Intelligence</h2>
                 <p data-i18n="hero-description">We turn complex data into actionable insights using AWS, Azure, Snowflake, Databricks, Power BI, Tableau and ThoughtSpot.</p>
                 <div class="hero-buttons">
@@ -92,24 +143,23 @@
                     <p data-i18n="about-text3">Every business faces unique challenges and opportunities. We take the time to deeply understand your specific goals and data landscape before crafting custom strategies that align perfectly with your vision. Our collaborative approach ensures you get solutions that grow with your business.</p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-item">
+                    <div class="stat-item" aria-label="10+ Years Experience">
                         <div class="stat-number counter">10+</div>
                         <div class="stat-text" data-i18n="about-stat1">Years Experience</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" aria-label="30+ Happy Clients">
                         <div class="stat-number counter">30+</div>
                         <div class="stat-text" data-i18n="about-stat2">Happy Clients</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" aria-label="110+ Projects Completed">
                         <div class="stat-number counter">110+</div>
                         <div class="stat-text" data-i18n="about-stat3">Projects Completed</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" aria-label="20+ Team Members">
                         <div class="stat-number counter">20+</div>
                         <div class="stat-text" data-i18n="about-stat4">Team Members</div>
                     </div>
                 </div>
-                <!-- About CTA section has been removed -->
             </div>
         </div>
     </section>
